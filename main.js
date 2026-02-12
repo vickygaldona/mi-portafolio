@@ -1,27 +1,28 @@
 // ========== Configuración Inicial ==========
 const projectsData = [
     {
-        title: "Sistema de Gestión de Tareas",
-        description: "Aplicación web fullstack para gestión de proyectos con autenticación de usuarios, asignación de tareas y seguimiento en tiempo real.",
-        tech: ["Node.js", "PostgreSQL", "JavaScript", "CSS"],
-        demoUrl: "#",
-        codeUrl: "https://github.com/tuusuario/proyecto1"
+        title: "Página para inscribirse a un curso",
+        description: "Sistema gestión  que permite a los usuarios informarse y poder inscribirse.  Interfaz intuitiva y responsive para una experiencia de aprendizaje óptima.",
+        tech: ["JavaScript", "HTML", "CSS", "Netlify"],
+        demoUrl: "https://carnetmanipulacionalimentos.netlify.app/",
+        
     },
     {
-        title: "Dashboard Analítico",
-        description: "Panel de control interactivo con visualización de datos y métricas en tiempo real. Incluye gráficos dinámicos y exportación de reportes.",
-        tech: ["JavaScript", "HTML", "CSS", "Vite"],
-        demoUrl: "#",
-        codeUrl: "https://github.com/tuusuario/proyecto2"
+        title: "Minimarket Digital",
+        description: "E-commerce completo para minimarket con catálogo de productos dinámico Implementa categorización de productos y Diseño responsive adaptado para dispositivos móviles y desktop.",
+        tech: ["JavaScript", "HTML", "CSS", "Netlify"],
+        demoUrl: "https://minimarketbebidasalpaso.netlify.app/",
+        
     },
     {
-        title: "E-commerce Responsive",
-        description: "Tienda online completa con carrito de compras, sistema de pagos y panel de administración. Diseño responsive y moderno.",
-        tech: ["JavaScript", "Node.js", "PostgreSQL", "CSS"],
-        demoUrl: "#",
-        codeUrl: "https://github.com/tuusuario/proyecto3"
+        title: "Sistema de Gestión de Turnos",
+        description: "Página web para agendamiento y administración de turnos en tiempo real. Permite a los usuarios reservar citas, genera mensaje automáticas y gestionar su calendario.",
+        tech: ["JavaScript", "HTML", "CSS", "Netlify"],
+        demoUrl: "https://bauti-fade-studio.netlify.app/",
+        
     }
 ];
+
 
 // ========== Partículas de Fondo ==========
 class Particle {
@@ -256,7 +257,6 @@ function initScrollEffects() {
         });
     }, 100);
 }
-
 // ========== Cargar Proyectos ==========
 function loadProjects() {
     const projectsGrid = document.getElementById('projectsGrid');
@@ -282,9 +282,6 @@ function loadProjects() {
                 <div class="project-links">
                     <a href="${project.demoUrl}" class="project-link link-demo" target="_blank" rel="noopener">
                         Ver Demo
-                    </a>
-                    <a href="${project.codeUrl}" class="project-link link-code" target="_blank" rel="noopener">
-                        Ver Código
                     </a>
                 </div>
             </div>
@@ -349,7 +346,6 @@ function initContactForm() {
         */
     });
 }
-
 // ========== Descargar CV ==========
 function initDownloadCV() {
     const downloadBtn = document.getElementById('downloadCV');
@@ -358,16 +354,26 @@ function initDownloadCV() {
     const handleDownload = (e) => {
         e.preventDefault();
         
-        // Aquí pondrías el link real a tu CV
-        alert('Función de descarga de CV. Conectá esto con tu archivo PDF real.');
+        // Abrir el CV en una nueva pestaña
+        window.open('/assets/cv-victoria.jpg', '_blank');
         
-        // Para descargar archivo real:
-        // window.open('/assets/cv-victoria.pdf', '_blank');
+        // O si prefieres forzar la descarga:
+        /*
+        const link = document.createElement('a');
+        link.href = '/assets/cv-victoria.jpg';
+        link.download = 'CV-Victoria-Galdona.jpg';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        */
     };
     
     downloadBtn.addEventListener('click', handleDownload);
     downloadNavBtn.addEventListener('click', handleDownload);
 }
+
+
+
 
 // ========== Animación de Números/Stats (Opcional) ==========
 function animateValue(element, start, end, duration) {
