@@ -9,7 +9,7 @@ const projectsData = [
     },
     {
         title: "Minimarket Digital",
-        description: "E-commerce completo para minimarket con catálogo de productos dinámico Implementa categorización de productos y Diseño responsive adaptado para dispositivos móviles y desktop.",
+        description: "Página para minimarket con catálogo de productos dinámico. Implementa categorización de productos y Diseño responsive adaptado para dispositivos móviles y desktop.",
         tech: ["JavaScript", "HTML", "CSS", "Netlify"],
         demoUrl: "https://minimarketbebidasalpaso.netlify.app/",
         
